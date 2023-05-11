@@ -3,6 +3,7 @@ import mssql  from "mssql";
 
 
 const config = {
+    driver : "SQL Server",
     server : "DESKTOP-9FVDQLR\\HUYBUI",
     user : 'sa',
     password : '1234',
