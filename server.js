@@ -16,7 +16,12 @@ const config = {
 
 export const conn = new mssql.connect(config).then(pool  => {
     console.log("Connected to MSSQL");
-    
+    try {
+        const q = `SELECT ID, _Name AS Name,_Image AS Image FROM Category`;
+        pool.query(q,).then(data => console.log(data))
+    } catch (error) {
+        console.log(error);
+    }
     return pool;
 }).catch(err => console.log("Database Connection Failed! Bad Config: ", err));
 

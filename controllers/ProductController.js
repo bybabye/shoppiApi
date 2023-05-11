@@ -7,10 +7,10 @@ export const getListProduct = async(req,res) => {
     FROM dbo.Product P 
     JOIN dbo.Category C ON C.ID = P.CategoryID 
     JOIN dbo.Supplier S ON S.ID = P.SupplierID`;
-    const pool = await conn;
-   
+    
     try {
-      return await pool.request().query(query, (err, data) => {
+      const pool = await conn;
+      return await pool.query(query, (err, data) => {
         if (err) {
           console.log(err);
           return res.status(403).json({ messages: "Forbidden" });
@@ -35,10 +35,11 @@ export const addProduct = async (req, res) => {
     VALUES ('${uuidv4()}',N'${data.name}',N'${data.image}'
     ,N'${data.description}','4IvLY'
     ,N'${data.color}','$${data.price}',${data.quantity},'4fqqv1bixCJERHpTHRzY85BRkTFv')`
-    const pool = await conn;
-    console.log(query);
+    
+   
     try {
-      return await pool.request().query(query, (err, data) => {
+      const pool = await conn;
+      return await pool.query(query, (err, data) => {
         if (err) {
           console.log(err);
           return res.status(403).json({ messages: "Forbidden" });
