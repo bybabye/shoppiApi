@@ -35,8 +35,7 @@ export const addProduct = async (req, res) => {
     VALUES ('${uuidv4()}',N'${data.name}',N'${data.image}'
     ,N'${data.description}','4IvLY'
     ,N'${data.color}','$${data.price}',${data.quantity},'4fqqv1bixCJERHpTHRzY85BRkTFv')`
-    
-   
+    console.log(query);
     try {
       const pool = await conn;
       return await pool.query(query, (err, data) => {
