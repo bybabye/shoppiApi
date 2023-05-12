@@ -4,7 +4,7 @@ import mssql  from "mssql";
 
 const config = {
     driver : "SQL Server",
-    server : "DESKTOP-9FVDQLR\\HUYBUI",
+    server : "192.168.100.16,1433",
     user : 'sa',
     password : '1234',
     database : "QLBH",
@@ -12,7 +12,6 @@ const config = {
         encrypt: true, // for azure
         trustServerCertificate: true // change to true for local dev / self-signed certs
     },
-    port : 1433
     
 }
 
