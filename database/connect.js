@@ -4,7 +4,7 @@ import mssql  from "mssql";
 
 const config = {
     driver : "SQL Server",
-    server : "192.168.100.16",
+    server : "DESKTOP-9FVDQLR\\HUYBUI",
     user : 'sa',
     password : '1234',
     database : "QLBH",
