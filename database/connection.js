@@ -1,12 +1,12 @@
 import pg from 'pg'
-
+import 'dotenv/config';
 
 const pool = new pg.Pool({
-    user: 'postgres',
-    host: 'containers-us-west-143.railway.app',
-    database: 'railway',
-    password: 'ZJomQhc0cmKmqmyZOar8',
-    port: "7561", // Cổng mặc định của PostgreSQL là 5432
+    user:  process.env.POSTQRESQL_USER,
+    host: process.env.POSTQRESQL_HOST,
+    database: process.env.POSTQRESQL_DATABASE,
+    password: process.env.POSTQRESQL_PASSWORD,
+    port: process.env.POSTQRESQL_PORT, // Cổng mặc định của PostgreSQL là 5432
 });
 
 
