@@ -1,8 +1,8 @@
-import { addUser } from "../controllers/UserController.js";
+// import { addUser } from "../controllers/UserController.js";
 
-const UserRouter = express.Router();
+// const UserRouter = express.Router();
 
 
-CategoryRouter.get('/User/add',addUser)
+// CategoryRouter.get('/User/add',addUser)
 
-export default UserRouter;
+// export default UserRouter;

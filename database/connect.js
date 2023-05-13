@@ -1,26 +1,14 @@
-import mssql  from "mssql"; 
+import pg from 'pg'
+
+
+const pool = new pg.Pool({
+    user: 'postgres',
+    host: 'containers-us-west-143.railway.app',
+    database: 'railway',
+    password: 'ZJomQhc0cmKmqmyZOar8',
+    port: "7561", // Cổng mặc định của PostgreSQL là 5432
+});
 
 
 
-const config = {
-    driver : "SQL Server",
-    server : "DESKTOP-9FVDQLR\\HUYBUI",
-    user : 'sa',
-    password : '1234',
-    database : "QLBH",
-    options: {
-        encrypt: true, // for azure
-        trustServerCertificate: true // change to true for local dev / self-signed certs
-    },
-    port : 1433
-    
-}
-
-
-export const conn = new mssql.connect(config).then(pool  => {
-    console.log("Connected to MSSQL");
-    
-    return pool;
-}).catch(err => console.log("Database Connection Failed! Bad Config: ", err));
-
-
+export default pool;

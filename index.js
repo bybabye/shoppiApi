@@ -5,7 +5,7 @@ import cors from "cors";
 import { getAuth } from "firebase-admin/auth";
 import { auth } from "./firebaseConfig.js";
 import dotevn from "dotenv";
-import ProductRouter from "./routers/ProductRouter.js";
+// import ProductRouter from "./routers/ProductRouter.js";
 import OpenRouter from "./routers/OpenRouter.js";
 
 const app = express();
@@ -31,8 +31,8 @@ const authorizationJWT = async (req, res, next) => {
 };
 app.use(cors(),bodyParser.json());
 app.use("/", OpenRouter);
-app.use(authorizationJWT) ;
-app.use("/",ProductRouter)
-app.listen(process.env.PORT || 8000, () => {
+// app.use(authorizationJWT) ;
+// app.use("/",ProductRouter)
+app.listen(process.env.PORT || 8888, () => {
   console.log("server is running");
 });

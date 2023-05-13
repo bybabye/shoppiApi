@@ -1,12 +1,12 @@
-import express from "express";
-import { addProduct } from "../controllers/ProductController.js";
+// import express from "express";
+// import { addProduct } from "../controllers/ProductController.js";
 
 
 
 
-const ProductRouter = express.Router();
+// const ProductRouter = express.Router();
 
 
-ProductRouter.post('/Product/add',addProduct)
+// ProductRouter.post('/Product/add',addProduct)
 
-export default ProductRouter;
+// export default ProductRouter;
