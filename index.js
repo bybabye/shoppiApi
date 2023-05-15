@@ -29,6 +29,7 @@ const authorizationJWT = async (req, res, next) => {
 
   }
 };
+const whitelist = ['http://localhost:3000/', 'http://localhost:8888/','https://shopii.onrender.com/'];
 app.use(cors(),bodyParser.json());
 app.use("/", OpenRouter);
 // app.use(authorizationJWT) ;

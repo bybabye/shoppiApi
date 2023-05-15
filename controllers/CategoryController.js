@@ -1,5 +1,5 @@
-import pool from "../database/connection.js";
-
+import pool from "../database/connect.js";
+  
 
 export const getListCategory = async (req, res) => {
   const query = `SELECT * FROM "category"`;
